@@ -1,0 +1,52 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.commons.layout"
+          controllerName="AddressManagement.controller.EditAddress">
+    <Page class="sapUiResponsiveMargin" title="{i18n>homePageTitle}" showNavButton="true" navButtonPress="NavPress">
+        <Panel headerText="{i18n>panelAddressEditTitle}" class="sapUiResponsiveMargin" width="auto">
+            <content>
+                <l:MatrixLayout widths="50px,200px">
+                    <l:MatrixLayoutRow>
+                        <l:MatrixLayoutCell>
+                            <Text text="{i18n>lblFirstName}"/>
+                        </l:MatrixLayoutCell>
+                        <l:MatrixLayoutCell>
+                            <Input id="firstName" value="{/firstName}" width="60%"/>
+                        </l:MatrixLayoutCell>
+                    </l:MatrixLayoutRow>
+                    <l:MatrixLayoutRow>
+                        <l:MatrixLayoutCell>
+                            <Text text="{i18n>lblLastName}"/>
+                        </l:MatrixLayoutCell>
+                        <l:MatrixLayoutCell>
+                            <Input id="lastName" value="{/lastName}" width="60%"/>
+                        </l:MatrixLayoutCell>
+                    </l:MatrixLayoutRow>
+                    <l:MatrixLayoutRow>
+                        <l:MatrixLayoutCell>
+                            <Text text="{i18n>lblStreet}"/>
+                        </l:MatrixLayoutCell>
+                        <l:MatrixLayoutCell>
+                            <Input id="street" value="{/street}" width="60%"/>
+                        </l:MatrixLayoutCell>
+                    </l:MatrixLayoutRow>
+                    <l:MatrixLayoutRow>
+                        <l:MatrixLayoutCell>
+                            <Text text="{i18n>lblPlz}"/>
+                        </l:MatrixLayoutCell>
+                        <l:MatrixLayoutCell>
+                            <Input id="plz" value="{/plz}" width="60%"/>
+                        </l:MatrixLayoutCell>
+                    </l:MatrixLayoutRow>
+                    <l:MatrixLayoutRow>
+                        <l:MatrixLayoutCell>
+                            <Text text="{i18n>lblCity}"/>
+                        </l:MatrixLayoutCell>
+                        <l:MatrixLayoutCell>
+                            <Input id="city" value="{/city}" width="60%"/>
+                        </l:MatrixLayoutCell>
+                    </l:MatrixLayoutRow>
+                </l:MatrixLayout>
+                <Button press="onUpdateAddress" icon="sap-icon://accept" type="Navigation"/>
+            </content>
+        </Panel>
+    </Page>
+</mvc:View>

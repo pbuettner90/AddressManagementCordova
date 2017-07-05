@@ -1,0 +1,12 @@
+<mvc:View
+		xmlns="sap.m"
+		xmlns:mvc="sap.ui.core.mvc"
+		displayBlock="true">
+	<App id="app">
+		<Page title="{i18n>homePageTitle}">
+			<content>
+				<mvc:XMLView viewName="AddressManagement.view.NewAddress"/>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

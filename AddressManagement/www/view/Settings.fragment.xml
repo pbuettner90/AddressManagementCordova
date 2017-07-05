@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.commons.layout" xmlns:core="sap.ui.core">
+    <Dialog id="settingsDialog" title="{i18n>dialogSettingsTitle}">
+        <beginButton>
+            <Button id="btnSave" icon="sap-icon://accept"/>
+        </beginButton>
+
+        <content>
+            <l:MatrixLayout widths="50px,200px" class="sapUiResponsiveMargin">
+                <l:MatrixLayoutRow>
+                    <l:MatrixLayoutCell>
+                        <Text text="{i18n>titleUrl}"/>
+                    </l:MatrixLayoutCell>
+                    <l:MatrixLayoutCell>
+                        <Input id="inpUrl" width="100%"/>
+                    </l:MatrixLayoutCell>
+                </l:MatrixLayoutRow>
+                <l:MatrixLayoutRow>
+                    <l:MatrixLayoutCell>
+                        <Text text="{i18n>titleWebservice}"/>
+                    </l:MatrixLayoutCell>
+                    <l:MatrixLayoutCell>
+                        <Switch
+                                id="swWebservice"/>
+                    </l:MatrixLayoutCell>
+                </l:MatrixLayoutRow>
+            </l:MatrixLayout>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

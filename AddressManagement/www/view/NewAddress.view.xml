@@ -1,0 +1,113 @@
+<mvc:View
+		controllerName="AddressManagement.controller.NewAddress"
+		xmlns="sap.m"
+		xmlns:l="sap.ui.commons.layout"
+		xmlns:mvc="sap.ui.core.mvc">
+
+	<HeaderContainer>
+		<Button press="onSettingsDialog"  icon="sap-icon://action-settings"/>
+	</HeaderContainer>
+
+	<Panel
+			headerText="{i18n>panelAddressCheckTitle}"
+			class="sapUiResponsiveMargin"
+			width="auto">
+
+		<content>
+
+
+			<l:MatrixLayout
+					widths="50px,200px">
+
+				<l:MatrixLayoutRow>
+					<l:MatrixLayoutCell>
+						<Text text = "{i18n>lblFirstName}"/>
+					</l:MatrixLayoutCell>
+
+					<l:MatrixLayoutCell>
+						<Input
+								value="{/address/firstName}"
+								width="60%"/>
+					</l:MatrixLayoutCell>
+				</l:MatrixLayoutRow>
+
+				<l:MatrixLayoutRow>
+					<l:MatrixLayoutCell>
+						<Text text = "{i18n>lblLastName}"/>
+					</l:MatrixLayoutCell>
+
+					<l:MatrixLayoutCell>
+						<Input
+								value="{/address/lastName}"
+								width="60%"/>
+					</l:MatrixLayoutCell>
+				</l:MatrixLayoutRow>
+
+				<l:MatrixLayoutRow>
+					<l:MatrixLayoutCell>
+						<Text text = "{i18n>lblStreet}"/>
+					</l:MatrixLayoutCell>
+
+					<l:MatrixLayoutCell>
+						<Input
+								id="street"
+								value="{/address/street}"
+								width="60%"/>
+					</l:MatrixLayoutCell>
+				</l:MatrixLayoutRow>
+
+				<l:MatrixLayoutRow>
+					<l:MatrixLayoutCell>
+						<Text text = "{i18n>lblPlz}"/>
+					</l:MatrixLayoutCell>
+
+					<l:MatrixLayoutCell>
+						<Input
+								id="plz"
+								value="{/address/plz}"
+								width="60%"/>
+					</l:MatrixLayoutCell>
+				</l:MatrixLayoutRow>
+
+				<l:MatrixLayoutRow>
+					<l:MatrixLayoutCell>
+						<Text text = "{i18n>lblCity}"/>
+					</l:MatrixLayoutCell>
+
+					<l:MatrixLayoutCell>
+						<Input
+								id="city"
+								value="{/address/city}"
+								width="60%"/>
+					</l:MatrixLayoutCell>
+				</l:MatrixLayoutRow>
+
+			</l:MatrixLayout>
+
+			<HBox justifyContent="Center">
+
+				<Button
+						class="sapUiResponsiveMargin"
+						width="auto"
+						icon="sap-icon://accept"
+						press="onAddressCheck"
+						/>
+
+				<Button
+						class="sapUiResponsiveMargin"
+						width="auto"
+						icon="sap-icon://locate-me"
+						press="onGetPosition"/>
+
+				<Button
+						class="sapUiResponsiveMargin"
+						width="auto"
+						icon="sap-icon://map"
+						press="onShowMap"/>
+
+			</HBox>
+
+
+		</content>
+	</Panel>
+</mvc:View>

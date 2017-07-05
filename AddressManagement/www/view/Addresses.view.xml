@@ -1,0 +1,57 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="AddressManagement.controller.Addresses">
+    <Page class="sapUiResponsiveMargin" title="{i18n>homePageTitle}" navButtonPress="NavPress" showNavButton="true">
+        <content>
+            <Table itemPress="rowSelectionChanged" id="addressList" items="{ path : 'webservice>/Addresses',             parameters : { $$operationMode : 'Server'}    }">
+
+                <columns>
+                    <Column>
+                        <Text text="Vorname" filterProperty="FirstName"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="Nachname" filterProperty="LastName"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="Strasse" filterProperty="Street"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="Ort" filterProperty="City"/>
+                    </Column>
+
+                    <Column>
+                    </Column>
+
+
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation">
+                        <Text text="{webservice>FirstName}"/>
+                        <Text text="{webservice>LastName}"/>
+                        <Text text="{webservice>Street}"/>
+                        <Text text="{webservice>City}"/>
+                        <Button text = "Addresse zuordnen" press="onMatchAddress"/>
+                    </ColumnListItem>
+                </items>
+
+                <infoToolbar>
+                    <Toolbar>
+                        <Text id="address" text="Ihre Addresse: {/address/firstName} {/address/lastName} {/address/street} {/address/plz} {/address/city} "/>
+                    </Toolbar>
+                </infoToolbar>
+
+                <headerToolbar>
+                    <Toolbar class="sapContrast sapContrastPlus" width="100%">
+                        <Button icon="sap-icon://add" press="createAddress" width="100px"/>
+                        <Button icon="sap-icon://filter" press="sortAddresses" width="100px"/>
+
+                        <ToolbarSpacer/>
+                        <SearchField liveChange="OnSearch" width="40%" placeholder="Suchen"/>
+                        <content/>
+                    </Toolbar>
+                </headerToolbar>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

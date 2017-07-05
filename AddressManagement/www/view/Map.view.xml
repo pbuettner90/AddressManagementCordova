@@ -1,0 +1,8 @@
+<core:View height="100%" controllerName="AddressManagement.controller.Map" xmlns="sap.m" xmlns:core="sap.ui.core"
+           xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page class="sapUiResponsiveMargin" id="mainPage" enableScrolling="false" showNavButton="true" navButtonPress="NavPress">
+        <VBox fitContainer="true" justifyContent="Center" alignItems="Center">
+            <HBox id="map_canvas" fitContainer="true" justifyContent="Center" alignItems="Center"/>
+        </VBox>
+    </Page>
+</core:View>
